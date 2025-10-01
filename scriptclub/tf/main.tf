@@ -1,3 +1,5 @@
+//data.<data source type>.<data source instance>.<instance attribute>
+
 data "akamai_property" "read_property" {
     name = "will-scriptclub"
 }
@@ -22,8 +24,10 @@ output "group_id" {
 
 output "secinfo" {
     value = data.akamai_appsec_configuration.my_config
-  
 }
+
+
+
 
 
 
