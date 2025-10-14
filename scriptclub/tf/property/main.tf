@@ -27,6 +27,11 @@ output "group_id" {
 # }
 
 
+locals {
+  notes = "TF-3001/${data.akamai_group.read_group.id}"
+}
+
+
 
 
 
