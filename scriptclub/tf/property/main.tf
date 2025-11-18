@@ -4,6 +4,10 @@ data "akamai_property" "read_property" {
     name = "will-scriptclub"
 }
 
+data "akamai_property" "read_propertytf" {
+    name = "willtfamdproperty1"
+}
+
 output "prod_version" {
     value = data.akamai_property.read_property.production_version
 }
@@ -31,8 +35,26 @@ locals {
   notes = "TF-3001/${data.akamai_group.read_group.id}"
 }
 
+locals {
+  notesP = "First version, from locals"
+}
 
+locals {
+  app_hostnames = {for domain in var.apps : "${domain}" => "${domain}-example.akamaized.net"}
+}
 
+// local variable for DNS hostnames
+locals {
+  app_dnshostnames = {for domain in var.apps : "${domain}" => "${domain}.examplewilltf.com"}
+}
+ 
+output "hostname" {
+  value = local.app_hostnames
+}
+
+output "hostnamedns" {
+  value = local.app_dnshostnames
+}
 
 
 
