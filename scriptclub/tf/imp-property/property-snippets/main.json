@@ -1,0 +1,65 @@
+{
+  "accountId": "act_1-5BYUG1",
+  "contractId": "ctr_1-5C13O2",
+  "groupId": "grp_299415",
+  "propertyId": "prp_1268695",
+  "propertyVersion": 1,
+  "etag": "4a71d5c622813bf97ea59973119a891b95e2cf89",
+  "ruleFormat": "latest",
+  "rules": {
+    "name": "default",
+    "behaviors": [
+      {
+        "name": "origin",
+        "options": {
+          "cacheKeyHostname": "REQUEST_HOST_HEADER",
+          "compress": true,
+          "enableTrueClientIp": false,
+          "forwardHostHeader": "ORIGIN_HOSTNAME",
+          "hostname": "origin-a.example.com",
+          "httpPort": 80,
+          "originType": "CUSTOMER"
+        }
+      },
+      {
+        "name": "cpCode",
+        "options": {
+          "value": {
+            "id": 1894523,
+            "name": "willtfcpcodeamd"
+          }
+        }
+      },
+      {
+        "name": "clientCharacteristics",
+        "options": {
+          "country": "UNKNOWN"
+        }
+      },
+      {
+        "name": "contentCharacteristicsAMD",
+        "options": {
+          "catalogSize": "UNKNOWN",
+          "contentType": "HD",
+          "popularityDistribution": "UNKNOWN"
+        }
+      },
+      {
+        "name": "originCharacteristics",
+        "options": {
+          "authenticationMethod": "AUTOMATIC",
+          "authenticationMethodTitle": "",
+          "country": "UNKNOWN"
+        }
+      },
+      {
+        "name": "segmentedMediaOptimization",
+        "options": {
+          "behavior": "ON_DEMAND"
+        }
+      }
+    ],
+    "comments": "The behaviors in the default rule apply to all requests for the property hostnames unless another rule overrides these settings.\n",
+    "options": {}
+  }
+}

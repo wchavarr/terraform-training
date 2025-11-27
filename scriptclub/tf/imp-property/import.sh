@@ -1,0 +1,5 @@
+terraform init
+terraform import akamai_edge_hostname.willtf1-akamaized-net ehn_6033068,ctr_1-5C13O2,grp_299415
+terraform import akamai_property.willtfamdproperty1 prp_1268695,ctr_1-5C13O2,grp_299415,LATEST
+terraform import akamai_property_activation.willtfamdproperty1-staging prp_1268695:STAGING
+terraform import akamai_property_activation.willtfamdproperty1-production prp_1268695:PRODUCTION
